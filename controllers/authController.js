@@ -23,7 +23,8 @@ const register = async (req, res) => {
       token: generateToken(user._id),
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error("FULL ERROR 👉", error);
+res.status(500).json({ message: error.message });
   }
 };
 
